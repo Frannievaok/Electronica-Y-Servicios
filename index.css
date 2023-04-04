@@ -282,5 +282,12 @@ a:hover{
 
 }
 
+@media screen and (max-width:500px){
 
+    .nav-logo img{
+        width: 300px;
+        height: 50px;
+    }
+
+}
 
