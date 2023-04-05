@@ -14,6 +14,34 @@ dropdowMenu.addEventListener("click",()=>{
     }
 })
 
+var service = document.querySelector(".service-1");
+var visibleDescription = document.querySelector(".s1");
+
+service.addEventListener("click",visible);
+
+function visible(){
+    visibleDescription.classList.toggle("active");
+}
+
+
+var service2 = document.querySelector(".service-2");
+var visibleDescription2 = document.querySelector(".s2");
+
+service2.addEventListener("click",visible2);
+
+function visible2(){
+    visibleDescription2.classList.toggle("active");
+}
+
+
+var service3 = document.querySelector(".service-3");
+var visibleDescription3 = document.querySelector(".s3");
+
+service3.addEventListener("click",visible3);
+
+function visible3(){
+    visibleDescription3.classList.toggle("active");
+}
 
 
 var imagenes = [
