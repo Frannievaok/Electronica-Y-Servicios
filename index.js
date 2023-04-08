@@ -44,8 +44,9 @@ function visible3(){
 }
 
 
+
 var imagenes = [
-                "assets/pruebas-en-laboratorio.jpg",
+                "assets/pruebas-en-laboratorio2.jpg",
                 "assets/reparacion-de-modulos.jpg",
                 "assets/diagnostico-en-planta.jpg"
 ]
@@ -62,8 +63,6 @@ var contentDescription = [
 document.image.src=imagenes[0];
 description.innerText = contentDescription[0];
 
-var sliderRight = document.querySelector(".slider-right");
-var sliderLeft = document.querySelector(".slider-left");
 var contador = 0;
 
 function moveRight(){
@@ -77,20 +76,46 @@ function moveRight(){
 
 var intervalo = setInterval(moveRight, 4000);
 
-sliderRight.addEventListener("click", function(){
-    clearInterval(intervalo);
-    moveRight();
-    intervalo = setInterval(moveRight, 4000);
-});
 
-function moveLeft(){
-    contador--;
-    if(contador < 0){
-        contador = imagenes.length - 1;
-    }
-    document.image.src = imagenes[contador];
-    description.innerText = contentDescription[contador];
+
+
+var imagenes2 = [
+    "assets/reparacion-1.jpg",
+    "assets/reparacion-2.jpg",
+    "assets/reparacion-3.jpg",
+    "assets/reparacion-4.jpg",
+    "assets/reparacion-5.jpg",
+    "assets/reparacion-6.jpg",
+    "assets/reparacion-7.jpg",
+    "assets/reparacion-8.jpg",
+]
+
+var description2 = document.getElementById("description2");
+
+var contentDescription2 = [
+    "REPARAION DE MODULO DE CARGA DE TIJERA JLG",
+    "REPARACION DE MODULO DE MOTOR DE AUTOELEVADOR DOSSAN",
+    "REPARACION DE MODULO DE MOTOR DE AUTOELEVADOR DOSSAN",
+    "REPARACION DE MODULO DE CONTROL DE CARRETILLA ELECTRICA MITSUBISHI",
+    "REPARACION DE MODULO DE MOTOR DE AUTOELEVADOR LINDE",
+    "EQUIPO GENKINGER CON MODULO DE DIRECCION DAÑADO. SE RETIRO EL MISMO PARA SU REPARACION",
+    "REPARACION DE PLACA DE POTENCIA DE ZORRA MITSUBISHI",
+    "DIAGNOSTICO EN BANCO Y REPARACION DE MODULO DE AUTOELEVADOR ELECTRICO TOYOTA",
+    "REPARACION DE MODULO PARA BRAZO JLG"
+];
+
+document.image2.src=imagenes2[0];
+description2.innerText = contentDescription2[0];
+
+var contador2 = 0;
+
+function moveRight2(){
+contador2++;
+if(contador2 > imagenes2.length - 1){
+contador2 = 0;
+}
+document.image2.src = imagenes2[contador2];
+description2.innerText = contentDescription2[contador2];
 }
 
-sliderLeft.addEventListener("click", moveLeft);
-
+var intervalo2 = setInterval(moveRight2, 4000);
